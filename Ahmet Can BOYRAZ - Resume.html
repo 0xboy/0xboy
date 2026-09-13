@@ -3,205 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ahmet Can Boyraz — Resume</title>
+  <title>Ahmet Can Boyraz - Resume</title>
   <style>
-    @page {
-      size: A4;
-      margin: 0;
-    }
-
+    @page { size: A4; margin: 10mm; }
     :root {
       --ink: #1a1d23;
       --muted: #5c6570;
       --accent: #1e4d6b;
       --line: #d8dee6;
     }
-
     * { box-sizing: border-box; }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
-
+    html, body { margin: 0; padding: 0; }
     body {
-      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-      font-size: 9.4pt;
-      line-height: 1.38;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10pt;
+      line-height: 1.28;
       color: var(--ink);
       background: #e8eaed;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
-
     .page {
       width: 210mm;
       min-height: 297mm;
       margin: 16px auto;
-      padding: 12mm 13mm;
+      padding: 9mm 10mm;
       background: #fff;
       box-shadow: 0 2px 16px rgba(0,0,0,.12);
     }
-
     @media print {
       body { background: #fff; }
-      .page {
-        margin: 0;
-        box-shadow: none;
-        width: 210mm;
-        min-height: auto;
-        height: 297mm;
-        padding: 11mm 12mm;
-        overflow: hidden;
-      }
+      .page { margin: 0; box-shadow: none; width: auto; min-height: auto; padding: 0; }
       .no-print { display: none !important; }
     }
-
     .toolbar {
-      max-width: 210mm;
-      margin: 16px auto 0;
-      display: flex;
-      gap: 8px;
-      justify-content: flex-end;
-      padding: 0 4px;
+      max-width: 210mm; margin: 16px auto 0; display: flex;
+      gap: 8px; justify-content: flex-end; padding: 0 4px;
     }
-
     .toolbar button {
-      font: inherit;
-      font-size: 12px;
-      padding: 8px 14px;
-      border: none;
-      border-radius: 6px;
-      background: var(--accent);
-      color: #fff;
-      cursor: pointer;
+      font: inherit; font-size: 12px; padding: 8px 14px; border: none;
+      border-radius: 6px; background: var(--accent); color: #fff; cursor: pointer;
     }
-
-    .toolbar button:hover { filter: brightness(1.08); }
-
     header {
-      margin-bottom: 8px;
-      padding-bottom: 8px;
-      border-bottom: 2.5px solid var(--accent);
+      margin-bottom: 6px; padding-bottom: 6px;
+      border-bottom: 2px solid var(--accent);
     }
-
     h1 {
-      margin: 0;
-      font-size: 18pt;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: var(--accent);
-      line-height: 1.15;
+      margin: 0; font-size: 18pt; font-weight: 700;
+      color: var(--accent); line-height: 1.15;
     }
-
-    .role {
-      margin: 3px 0 5px;
-      font-size: 10.5pt;
-      font-weight: 600;
-    }
-
-    .contact {
-      margin: 0;
-      font-size: 8.5pt;
-      color: var(--muted);
-    }
-
-    .contact a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .sep {
-      margin: 0 5px;
-      color: #b0b8c2;
-    }
-
+    .role { margin: 2px 0 4px; font-size: 11pt; font-weight: 600; }
+    .contact { margin: 0; font-size: 9pt; color: var(--muted); }
+    .contact a { color: var(--accent); text-decoration: none; }
+    .sep { margin: 0 4px; color: #b0b8c2; }
     h2 {
-      margin: 9px 0 5px;
-      font-size: 9pt;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--accent);
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 3px;
+      margin: 5px 0 2px; font-size: 10pt; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent);
+      border-bottom: 1px solid var(--line); padding-bottom: 1px;
     }
-
-    .summary {
-      margin: 0;
-      font-size: 9.3pt;
-    }
-
-    .skills {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 8.7pt;
-    }
-
-    .skills td {
-      vertical-align: top;
-      padding: 2px 0;
-    }
-
-    .skills td:first-child {
-      width: 92px;
-      color: var(--accent);
-      font-weight: 600;
-      white-space: nowrap;
-      padding-right: 10px;
-    }
-
-    .job {
-      margin: 0 0 6.5px;
-    }
-
-    .job.compact {
-      margin: 0 0 3px;
-    }
-
-    .job-head {
-      display: block;
-      margin-bottom: 1px;
-    }
-
-    .job-title {
-      font-weight: 700;
-      font-size: 9.5pt;
-    }
-
-    .job-date {
-      font-size: 8.5pt;
-      font-weight: 500;
-      color: var(--muted);
-    }
-
-    .job-date::before {
-      content: " · ";
-      color: #b0b8c2;
-    }
-
-    .stack {
-      margin: 1px 0 2px;
-      font-size: 8pt;
-      color: var(--muted);
-      font-style: italic;
-    }
-
-    ul {
-      margin: 2px 0 0;
-      padding-left: 15px;
-    }
-
-    li {
-      margin: 0 0 1.5px;
-    }
-
-    li::marker { color: var(--accent); }
-
-    .footer-line {
-      margin: 0;
-      font-size: 9pt;
-    }
+    p { margin: 0 0 1px; }
+    .skill { font-size: 9pt; margin: 0; }
+    .skill b { color: var(--accent); font-weight: 600; }
+    .job { margin: 0 0 4px; }
+    .job.compact { margin: 0 0 1px; }
+    .job-title { font-weight: 700; font-size: 10pt; }
+    .job-date { font-size: 9pt; color: var(--muted); }
+    .stack { margin: 1px 0; font-size: 9pt; color: var(--muted); font-style: italic; }
+    ul { margin: 1px 0 0; padding-left: 16px; }
+    li { margin: 0 0 1px; }
+    .muted { color: var(--muted); }
   </style>
 </head>
 <body>
@@ -215,135 +85,96 @@
       <p class="role">Senior Software Engineer</p>
       <p class="contact">
         <a href="mailto:boyraz.ahmetcan@gmail.com">boyraz.ahmetcan@gmail.com</a>
-        <span class="sep">·</span>
+        <span class="sep">|</span>
         <a href="https://linkedin.com/in/ahmetcanboyraz">linkedin.com/in/ahmetcanboyraz</a>
-        <span class="sep">·</span>
+        <span class="sep">|</span>
         Ankara, Turkey (UTC+3)
-        <span class="sep">·</span>
-        Remote worldwide
+        <span class="sep">|</span>
+        Turkish - Native | English - C1
       </p>
     </header>
 
     <h2>Summary</h2>
-    <p class="summary">
-      Senior engineer with 10+ years building commerce and enterprise backends — marketplace synchronization
-      (catalog, inventory, orders), multi-tenant B2B platforms, payments, and event-driven microservices.
-      Strong in .NET 8, Go, PostgreSQL, and Domain-Driven Design. Owns APIs end-to-end in remote teams.
+    <p>
+      Senior engineer with 10+ years in commerce and enterprise backends: multi-tenant B2B (sole technical owner),
+      marketplace sync, payments, event-driven systems. .NET 8, Go, PostgreSQL, DDD. Owns architecture end-to-end;
+      has led a small team hands-on.
     </p>
 
     <h2>Technical Skills</h2>
-    <table class="skills">
-      <tr><td>Languages</td><td>C#, Go, TypeScript, JavaScript, Python, PHP, SQL</td></tr>
-      <tr><td>Backend</td><td>.NET 8 / ASP.NET Web API, EF Core, Microservices, REST, GraphQL, gRPC, SOAP</td></tr>
-      <tr><td>Frontend</td><td>Angular, React, Svelte, TypeScript</td></tr>
-      <tr><td>Data</td><td>PostgreSQL, SQL Server, MongoDB, Redis, MySQL, Oracle</td></tr>
-      <tr><td>Architecture</td><td>DDD, Clean / Onion, CQRS, Event-Driven, Multi-tenant</td></tr>
-      <tr><td>DevOps</td><td>Docker, CI/CD (GitHub Actions), RabbitMQ, DigitalOcean, Stripe</td></tr>
-    </table>
+    <p class="skill"><b>Languages:</b> C#, Go, TypeScript, JavaScript, Python, PHP, SQL</p>
+    <p class="skill"><b>Backend:</b> .NET 8, ASP.NET Web API, EF Core, Microservices, REST, GraphQL, gRPC, SOAP, HL7, FHIR</p>
+    <p class="skill"><b>Frontend / Mobile:</b> Angular, React, SvelteKit, Flutter</p>
+    <p class="skill"><b>Data:</b> PostgreSQL, SQL Server, MongoDB, Redis, MySQL, Oracle</p>
+    <p class="skill"><b>Architecture / DevOps:</b> DDD, Clean/Onion, CQRS, Event-Driven, Multi-tenant | Docker, Nginx, CI/CD, Cloudflare Workers, RabbitMQ, DigitalOcean</p>
 
     <h2>Professional Experience</h2>
 
     <section class="job">
-      <div class="job-head">
-        <span class="job-title">Lead Developer · IQURBAN.COM</span>
-        <span class="job-date">Sep 2025 – Present</span>
-      </div>
-      <p class="stack">Go · PostgreSQL · Svelte · Docker · CI/CD — Multi-tenant B2B commerce</p>
+      <p><span class="job-title">Founder Engineer | IQurban.com</span> <span class="job-date">| Sep 2015 - Present</span></p>
+      <p class="stack">Go, PostgreSQL, SvelteKit, Flutter, Docker - Multi-tenant B2B commerce</p>
       <ul>
-        <li>Architected multi-tenant commerce platform (clean architecture); tenant isolation with RLS-style patterns</li>
-        <li>Payment gateway + notification integrations; REST APIs for commerce workflows; CI/CD + Docker releases</li>
+        <li>Sole technical owner since 2015; PHP v1 then Go v2 rebuild (modular monolith, tenant isolation, sales/ops, SMS/email)</li>
+        <li>Owns architecture, APIs, web/mobile, and production deploy end-to-end while running the platform alongside other full-time roles</li>
       </ul>
     </section>
 
     <section class="job">
-      <div class="job-head">
-        <span class="job-title">Senior Software Engineer · BilgiPark Danismanlik</span>
-        <span class="job-date">Jun 2025 – Jan 2026</span>
-      </div>
-      <p class="stack">.NET 8 · DDD · GraphQL · RabbitMQ · Angular · MongoDB · Docker — Marketplace ops</p>
+      <p><span class="job-title">Senior Software Engineer | BilgiPark Danismanlik</span> <span class="job-date">| Jun 2025 - Jan 2026</span></p>
+      <p class="stack">.NET 8, DDD, Angular, MongoDB - Marketplace ops</p>
       <ul>
-        <li>Built Product / Inventory / Order / Invoice microservices syncing catalog, stock, and orders across marketplaces (incl. Shopify)</li>
-        <li>Event-driven sync via RabbitMQ; GraphQL integration APIs; Angular ops dashboard + MongoDB logging</li>
+        <li>Owned about 35 microservices; catalog/stock/order sync across Shopify, Amazon, Trendyol, Hepsiburada, n11 and others</li>
+        <li>Centralized stock/order flows to cut overselling and duplicate work; Angular ops UI + MongoDB operational logging</li>
       </ul>
     </section>
 
     <section class="job">
-      <div class="job-head">
-        <span class="job-title">Senior Software Engineer · BELSIS</span>
-        <span class="job-date">Jul 2024 – May 2025</span>
-      </div>
-      <p class="stack">.NET · Classic ASP · SOAP · SQL Server · Oracle ETL — Municipality systems</p>
+      <p><span class="job-title">Senior Software Engineer | Belsis Yazilim</span> <span class="job-date">| Jul 2024 - May 2025</span></p>
+      <p class="stack">.NET, Classic ASP, SOAP, SQL Server, Oracle - Municipality</p>
       <ul>
-        <li>SOAP / legacy integrations and Oracle → SQL Server ETL; compliance features delivered with stakeholders on fixed timelines</li>
+        <li>Legacy SOAP integrations, Oracle to SQL Server ETL, compliance features on fixed timelines</li>
+        <li>Kept production municipality systems stable while extending features without full rewrites</li>
       </ul>
     </section>
 
     <section class="job">
-      <div class="job-head">
-        <span class="job-title">Software Development &amp; IT Manager · Kapsam</span>
-        <span class="job-date">Jun 2021 – Dec 2023</span>
-      </div>
-      <p class="stack">C# / .NET · WPF · MVVM · EF · SQL Server — Team of 5+</p>
+      <p><span class="job-title">Software Development Manager | Kapsam Saglik Urunleri</span> <span class="job-date">| Jun 2021 - Dec 2023</span></p>
+      <p class="stack">C#/.NET, WPF, Web API, SQL Server, HL7/FHIR - Team of 5+</p>
       <ul>
-        <li>Led engineering standards, mentoring, and delivery; WPF / N-tier architecture; ~40% performance gain via query tuning</li>
+        <li>Hands-on department lead: N-tier WPF + Web APIs, HL7/FHIR, about 40% faster critical screens, mentoring + delivery</li>
+        <li>On-site hospital deployments and go-lives; set engineering standards and code-review while owning day-to-day feature work</li>
       </ul>
     </section>
 
     <section class="job">
-      <div class="job-head">
-        <span class="job-title">Software Engineer · Erguvan Teknik A.S.</span>
-        <span class="job-date">Sep 2017 – Mar 2021</span>
-      </div>
-      <p class="stack">C# / .NET · WPF · ASP.NET Web API · EF · SQL Server — Order-entry systems</p>
+      <p><span class="job-title">Software Engineer | Erguvan Teknik</span> <span class="job-date">| Sep 2017 - Mar 2021</span></p>
+      <p class="stack">C#/.NET, WPF, Web API, SQL Server, HL7/FHIR - Prescription / order entry</p>
       <ul>
-        <li>Order-entry clients + Web APIs; SOLID / DI practices; ~35% fewer bug reports via testing and reviews</li>
+        <li>Prescription and order-entry WPF + Web APIs; HL7/FHIR interop; about 35% fewer recurring bugs via tests/reviews</li>
       </ul>
     </section>
 
     <h2>Selected Projects</h2>
-
-    <section class="job">
-      <div class="job-head">
-        <span class="job-title">ITOSBA — Intelligent Trading OS</span>
-        <span class="job-date">Master’s thesis · 2025 –</span>
-      </div>
-      <p class="stack">Go · Python · PostgreSQL · Docker · gRPC</p>
-      <ul>
-        <li>Trading platform: microservices + gRPC, Dockerized multi-language strategies, backtest / risk (Kelly); LSTM / RL as isolated services</li>
-      </ul>
+    <section class="job compact">
+      <p><span class="job-title">ITOSBA Intelligent Trading OS</span> <span class="job-date">| Masters thesis | 2025</span></p>
+      <p class="stack">Go, Python, PostgreSQL, gRPC - Trading microservices, backtest/risk, LSTM/RL services</p>
     </section>
-
-    <section class="job">
-      <div class="job-head">
-        <span class="job-title">PayBillDone — Invoice SaaS</span>
-        <span class="job-date">2025 –</span>
-      </div>
-      <p class="stack">Go (Gin) · React / TypeScript · PostgreSQL · Stripe · Docker</p>
-      <ul>
-        <li>Multi-tenant invoicing SaaS with Postgres RLS, Stripe subscriptions, PDF generation, DigitalOcean deploy</li>
-      </ul>
+    <section class="job compact">
+      <p><span class="job-title">LumiRouter.com</span> <span class="job-date">| Sep 2026 - Present</span></p>
+      <p class="stack">TypeScript, Cloudflare Workers - OpenAI-compatible AI model router gateway; auto routing + BYOK</p>
     </section>
 
     <h2>Education</h2>
-    <div class="job compact">
-      <div class="job-head">
-        <span class="job-title">M.Eng, Software Engineering — Ahmet Yesevi University</span>
-        <span class="job-date">2026</span>
-      </div>
-    </div>
-    <div class="job compact">
-      <div class="job-head">
-        <span class="job-title">B.Eng, Computer Engineering — Mevlana University</span>
-        <span class="job-date">2016</span>
-      </div>
-    </div>
+    <p><span class="job-title">M.Eng, Software Engineering | Ahmet Yesevi University</span> <span class="job-date">| 2026</span></p>
+    <p><span class="job-title">B.Eng, Computer Engineering | Mevlana University</span> <span class="job-date">| 2016</span></p>
+    <p><span class="job-title">Associate, Computer Programming | Gaziosmanpasa University</span> <span class="job-date">| 2012</span></p>
 
-    <h2>Languages</h2>
-    <p class="footer-line">
-      <strong>Turkish</strong> — Native
-      <span class="sep">·</span>
-      <strong>English</strong> — C1
-    </p>
+    <h2>Certifications</h2>
+    <p class="muted">Foundational C# (freeCodeCamp, 2024) | C# Basic (HackerRank, 2024) | Django Path (Patika.dev, 2024) | Bioinformatics I Honors (Coursera, 2017)</p>
+
+    <h2>Volunteering / Other</h2>
+    <p><strong>Reputationaire</strong> | Web/React | Jul 2018 - Apr 2019 | Remote AU startup (volunteer)</p>
+    <p><strong>Zuvvii</strong> | .NET, XAML, React | Apr 2024 - Jun 2024 | Remote US startup (unpaid)</p>
   </main>
 </body>
 </html>
