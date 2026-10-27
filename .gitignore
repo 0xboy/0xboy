@@ -1,5 +1,7 @@
 *
 !.gitignore
+!.gitattributes
+!.editorconfig
 !README.md
 !Ahmet Can BOYRAZ - Resume.md
 !Ahmet Can BOYRAZ - Resume.html
